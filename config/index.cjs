@@ -7,58 +7,110 @@
  */
 const USER_CONFIG = {
 
-  USE_PASSAGE: 'push-deer',
+  USE_PASSAGE: 'wechat-test',
   // 使用微信测试号：公众号APP_ID
-  APP_ID: 'wx62b70c07695830ea',
+  APP_ID: '',
 
   // 使用微信测试号：公众号APP_SECRET
-  APP_SECRET: '29383be44805a1296ab80727e5f10d0b',
+  APP_SECRET: '',
 
-  PROVINCE: '新疆',
-  CITY: '伊宁市',
+  PROVINCE: '四川',
+  CITY: '绵阳',
 
+  // 为了避免推送服务器误将脚本列为恶意推送脚本，可设置每分钟脚本最大推送数
+  // 每分钟脚本最大推送数，超过此数将会休眠1分钟后再发送剩余消息，不填则默认为5
+  // 此项不建议随意修改
+  MAX_PUSH_ONE_MINUTE: 5,
+  // 配合MAX_PUSH_ONE_MINUTE使用，休眠<SLEEP_TIME>毫秒后再发送剩余消息，不填则默认为65000
+  SLEEP_TIME: 65000,
+
+  // 功能开关,打开：true，关闭：false
+  SWITCH: {
+    /** 每日天气 */
+    // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    weather: true,
+
+    /** 节假日 */
+    // 下一休息日综合提醒, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    holidaytts: true,
+
+    /** 每日N句 */
+    // 金山每日一句, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    CIBA: false,
+    
+    // 每日一言, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    oneTalk: false,
+    
+    // 土味情话(彩虹屁), 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    earthyLoveWords: false,
+    
+    // 朋友圈文案, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    momentCopyrighting: true,
+    
+    // 毒鸡汤, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    poisonChickenSoup: false,
+    
+    // 古诗古文, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    poetry: false,
+
+    /** 星座运势 */
+    // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    horoscope: true,
+  
+    /** 生日消息和节日消息 */
+    // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    birthdayMessage: true,
+  
+    /** 学生课表 */
+    // 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
+    courseSchedule: false,
+  },
+  
   USERS: [
     {
       // 想要发送的人的名字
-      name: '监护大大',
+      name: '阿霙',
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: 'ofZNs5jbfVT_SeL-qE3gfmBqELu0',
+      id: 'ofZNs5ir2K804GmzMCdBfVyY-PxE	',
       // 使用微信测试号：你想对他发送的模板消息的模板ID
-      useTemplateId: 'zUAv6SeerAv8TYSH7lKYVveOd2gCAEZczuyKNHNs3yU',
+      useTemplateId: '13ZkyJ7PL02b-ijgDY9LGK7yGNDOgTxH1mo9nuOo7sQ',
+      // 所在省份或城市，也可以不填
+      province: '四川',
+      // 所在城市或县区
+      city: '绵阳',
       // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
-      horoscopeDate: '9-3',
+      horoscopeDate: '1-19',
+      // 获取什么时候的星座运势，可选：['今日', '明日', '本周', '本月', '今年'], 留空则随机
+      horoscopeDateType: '今日',
+      // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
+      openUrl: 'https://weibo.com',
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
         {
-          type: '*生日', name: '宝贝', year: '1996', date: '09-09',
+          type: '*生日', name: '阿霙', year: '2004', date: '01-19',
         },
         // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
         {
-          type: '生日', name: '李四', year: '1996', date: '09-31',
-        },
-        {
-          type: '节日', name: '相识纪念日', year: '2020', date: '09-03',
+          type: '节日', name: '阿霙的高考', year: '2023', date: '06-08',
         },
       ],
       // 我们在一起已经有xxxx天了的配置
       customizedDateList: [
-        // 在一起的日子
-        { keyword: 'love_day', date: '2022-09-21' },
-        // 结婚纪念日
-        //{ keyword: 'marry_day', date: '2022-09-09' },
+        // 在相识的日子
+        { keyword: 'love_day', date: '2022-06-18' },
       ],
     },
   ],
 
 
   // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
-  CALLBACK_TEMPLATE_ID: '',
+  CALLBACK_TEMPLATE_ID: 'VrKzAx5cv5yJTxtSnWomDnRuiDcIhXmCIBT1NtSuqKs',
 
   CALLBACK_USERS: [
     {
       name: '自己',
       // 使用微信测试号：自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: '',
+      id: 'ofZNs5oRCIytdwokD8ppc00LhjpM',
     }
   ],
 
