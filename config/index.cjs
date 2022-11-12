@@ -14,8 +14,8 @@ const USER_CONFIG = {
   // 使用微信测试号：公众号APP_SECRET
   APP_SECRET: '',
 
-  PROVINCE: '四川',
-  CITY: '绵阳',
+  PROVINCE: '',
+  CITY: '',
 
   // 为了避免推送服务器误将脚本列为恶意推送脚本，可设置每分钟脚本最大推送数
   // 每分钟脚本最大推送数，超过此数将会休眠1分钟后再发送剩余消息，不填则默认为5
@@ -71,9 +71,9 @@ const USER_CONFIG = {
       // 想要发送的人的名字
       name: '阿霙',
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: 'ofZNs5ir2K804GmzMCdBfVyY-PxE	',
+      id: 'ofZNs5ir2K804GmzMCdBfVyY-PxE',
       // 使用微信测试号：你想对他发送的模板消息的模板ID
-      useTemplateId: 'r3UB01tKSLLnQhINwC9ULz_-3jHPr1n44dZ4Ti-bG4I',
+      useTemplateId: 'oRfjiPPmMQ7OcmNNWSWFZLg4e3RpEK0jdvtVaaPU-RE',
       // 所在省份或城市，也可以不填
       province: '四川',
       // 所在城市或县区
@@ -98,6 +98,37 @@ const USER_CONFIG = {
       customizedDateList: [
         // 在相识的日子
         { keyword: 'love_day', date: '2022-06-18' },
+      ],
+    },
+    
+    {
+      // 想要发送的人的名字
+      name: '宝宝',
+      // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: 'ofZNs5mmhgJauYmmQkG2Ee0F3-_c',
+      // 使用微信测试号：你想对他发送的模板消息的模板ID
+      useTemplateId: 'mtfmjleRgKxVB7o1_2ViQqHi_SpnwelkD5DRW0DOr_c',
+      // 所在省份或城市，也可以不填
+      province: '山东',
+      // 所在城市或县区
+      city: '青岛',
+      // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
+      horoscopeDate: '5-28',
+      // 获取什么时候的星座运势，可选：['今日', '明日', '本周', '本月', '今年'], 留空则随机
+      horoscopeDateType: '今日',
+      // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
+      openUrl: 'https://weibo.com',
+      festivals: [
+        // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
+        {
+          type: '*生日', name: '宝宝', year: '2001', date: '05-28',
+        },
+        // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
+      ],
+      // 我们在一起已经有xxxx天了的配置
+      customizedDateList: [
+        // 在相识的日子
+        { keyword: 'love_day', date: '2022-10-17' },
       ],
     },
   ],
