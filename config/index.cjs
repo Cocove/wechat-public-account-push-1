@@ -103,17 +103,17 @@ const USER_CONFIG = {
     
     {
       // 想要发送的人的名字
-      name: '宝宝',
+      name: '',
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: 'ofZNs5mmhgJauYmmQkG2Ee0F3-_c',
+      id: '',
       // 使用微信测试号：你想对他发送的模板消息的模板ID
-      useTemplateId: 'mtfmjleRgKxVB7o1_2ViQqHi_SpnwelkD5DRW0DOr_c',
+      useTemplateId: '',
       // 所在省份或城市，也可以不填
-      province: '山东',
+      province: '',
       // 所在城市或县区
-      city: '青岛',
+      city: '',
       // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
-      horoscopeDate: '5-28',
+      horoscopeDate: '',
       // 获取什么时候的星座运势，可选：['今日', '明日', '本周', '本月', '今年'], 留空则随机
       horoscopeDateType: '今日',
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
@@ -121,7 +121,7 @@ const USER_CONFIG = {
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
         {
-          type: '*生日', name: '宝宝', year: '2001', date: '05-28',
+          type: '*生日', name: '', year: '', date: '',
         },
         // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
       ],
