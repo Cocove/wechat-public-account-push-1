@@ -9,13 +9,13 @@ const USER_CONFIG = {
 
   USE_PASSAGE: 'wechat-test',
   // 使用微信测试号：公众号APP_ID
-  APP_ID: '',
+  APP_ID: 'wx62b70c07695830ea',
 
   // 使用微信测试号：公众号APP_SECRET
-  APP_SECRET: '',
+  APP_SECRET: '29383be44805a1296ab80727e5f10d0b',
 
-  PROVINCE: '',
-  CITY: '',
+  PROVINCE: '广东',
+  CITY: '茂名',
 
   // 为了避免推送服务器误将脚本列为恶意推送脚本，可设置每分钟脚本最大推送数
   // 每分钟脚本最大推送数，超过此数将会休眠1分钟后再发送剩余消息，不填则默认为5
@@ -36,13 +36,13 @@ const USER_CONFIG = {
 
     /** 每日N句 */
     // 金山每日一句, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    CIBA: false,
+    CIBA: true,
     
     // 每日一言, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    oneTalk: false,
+    oneTalk: true,
     
     // 土味情话(彩虹屁), 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
-    earthyLoveWords: false,
+    earthyLoveWords: true,
     
     // 朋友圈文案, 填 false 则不使用，按需关闭不使用的功能可以提高运行速度
     momentCopyrighting: true,
@@ -69,17 +69,17 @@ const USER_CONFIG = {
   USERS: [
     {
       // 想要发送的人的名字
-      name: '阿霙',
+      name: '老婆宝宝',
       // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: 'ofZNs5ir2K804GmzMCdBfVyY-PxE',
+      id: 'ofZNs5n7nSEVuU8x1P2ALHNLN-g4',
       // 使用微信测试号：你想对他发送的模板消息的模板ID
-      useTemplateId: 'oRfjiPPmMQ7OcmNNWSWFZLg4e3RpEK0jdvtVaaPU-RE',
+      useTemplateId: 'eL9VMkqAlPvst1e7W1AVld7ygIlrVMocb246dXZT80M',
       // 所在省份或城市，也可以不填
-      province: '四川',
+      province: '广东',
       // 所在城市或县区
-      city: '绵阳',
+      city: '茂名',
       // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
-      horoscopeDate: '1-19',
+      horoscopeDate: '6-23',
       // 获取什么时候的星座运势，可选：['今日', '明日', '本周', '本月', '今年'], 留空则随机
       horoscopeDateType: '今日',
       // 他点击详情后跳转的页面,你可以设置成微博的热榜，也可以设置成其他，网址一定要填对；不填对也没关系，随便你，会打不开而已。
@@ -87,17 +87,18 @@ const USER_CONFIG = {
       festivals: [
         // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
         {
-          type: '*生日', name: '阿霙', year: '2004', date: '01-19',
+          type: '*生日', name: '宝宝的生日', year: '2003', date: '06-23',
         },
         // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
         {
-          type: '节日', name: '阿霙的高考', year: '2023', date: '06-08',
+          type: '节日', name: '在一起纪念日', year: '2023', date: '06-29',
         },
       ],
       // 我们在一起已经有xxxx天了的配置
       customizedDateList: [
         // 在相识的日子
-        { keyword: 'love_day', date: '2022-06-18' },
+        { keyword: 'love_day', date: '2023-06-29' },
+        { keyword: "marry_day", date: "2022-07-08"}
       ],
     },
     
